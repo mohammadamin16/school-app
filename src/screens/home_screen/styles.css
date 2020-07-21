@@ -1,0 +1,14 @@
+.home_screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title {
+    font-size: x-large;
+    font-style: italic;
+    text-underline: chocolate;
+    text-underline-style: dash;
+}
