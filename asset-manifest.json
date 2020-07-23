@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/school-app/static/css/main.2ac6d075.chunk.css",
-    "main.js": "/school-app/static/js/main.da76ddd3.chunk.js",
-    "main.js.map": "/school-app/static/js/main.da76ddd3.chunk.js.map",
-    "runtime~main.js": "/school-app/static/js/runtime~main.d30b6eb1.js",
-    "runtime~main.js.map": "/school-app/static/js/runtime~main.d30b6eb1.js.map",
-    "static/js/2.66948787.chunk.js": "/school-app/static/js/2.66948787.chunk.js",
-    "static/js/2.66948787.chunk.js.map": "/school-app/static/js/2.66948787.chunk.js.map",
-    "index.html": "/school-app/index.html",
-    "precache-manifest.642a4615d996deec1ff016728865e37c.js": "/school-app/precache-manifest.642a4615d996deec1ff016728865e37c.js",
-    "service-worker.js": "/school-app/service-worker.js",
-    "static/css/main.2ac6d075.chunk.css.map": "/school-app/static/css/main.2ac6d075.chunk.css.map"
+    "main.css": "./static/css/main.2ac6d075.chunk.css",
+    "main.js": "./static/js/main.8d56b34a.chunk.js",
+    "main.js.map": "./static/js/main.8d56b34a.chunk.js.map",
+    "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
+    "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
+    "static/js/2.66948787.chunk.js": "./static/js/2.66948787.chunk.js",
+    "static/js/2.66948787.chunk.js.map": "./static/js/2.66948787.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.821eb1aee2c4d55ced05447e7a3e2845.js": "./precache-manifest.821eb1aee2c4d55ced05447e7a3e2845.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.2ac6d075.chunk.css.map": "./static/css/main.2ac6d075.chunk.css.map"
   }
 }
