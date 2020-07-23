@@ -1,21 +1,23 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import './styles.css'
+//import Component
+import Table from '../../component/table/index';
 
-class DashboardScreen extends Component{
+function DashboardScreen(props) {
+    return(
+        <div className='dashboard_screen' >
+            <p className='title' >
+                Welcome {props.user.name}
+            </p>
 
-    render() {
-        return(
-            <div className='home_screen'>
-                <p className='title'>Welcome {this.props.user.name}</p>
-                <p onClick={() => {
-                    this.props.logout()
+            <Table/>
 
-                }}>Logout</p>
 
-            </div>
-        )
-    }
+
+
+        </div>
+    )
 }
 
 

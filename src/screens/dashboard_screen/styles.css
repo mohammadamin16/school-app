@@ -1,4 +1,4 @@
-.home_screen {
+.dashboard_screen {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,4 +11,17 @@
     font-style: italic;
     text-underline: chocolate;
     text-underline-style: dash;
+}
+
+.del_btn{
+    background-color: brown;
+    cursor: pointer;
+}
+
+.add_btn{
+    background-color: forestgreen;
+    padding: 10px;
+    border-radius: 10px;
+    margin:5px;
+    cursor: pointer;
 }

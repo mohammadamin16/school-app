@@ -1,0 +1,33 @@
+.table{
+    /*background-color: darkcyan;*/
+    padding: 10px;
+}
+
+.row{
+    /*background-color: burlywood;*/
+    padding: 10px;
+    margin:50px;
+}
+
+.cell{
+    /*border: solid black 1px;*/
+    padding: 15px;
+    background-color: #354c74;
+    width: 100px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 1000px;
+}
+
+.light-hover{
+    transition: background-color 0.3s ease;
+
+}
+
+.light-hover:hover{
+    background-color:#48679D ;
+}
+
+.header{
+    background-color: #4cc5ff;
+}
