@@ -1,4 +1,4 @@
-.table{
+.list{
     background-color: #4cc5ff;
     padding: 10px;
     align-self: center;
@@ -10,7 +10,6 @@
 .row{
     display: flex;
     flex-direction: row;
-    /*background-color: burlywood;*/
     margin: 5px;
 }
 
@@ -19,7 +18,6 @@
     border: none;
     padding: 10px;
     background-color: #354c74;
-    /*width: 100px;*/
     border-radius: 30px;
     text-align: center;
 }
@@ -68,4 +66,8 @@
 .col2{
     flex-grow: 1;
     background-color: brown;
+}
+
+.date-cell{
+    cursor: pointer;
 }

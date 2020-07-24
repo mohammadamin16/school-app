@@ -1,19 +1,32 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import './styles.css'
 //import Component
-import Table from '../../component/table/index';
+import List from '../../component/list/index';
+import {Link} from "react-router-dom";
+import {get_days} from "../../api/api";
 
 function DashboardScreen(props) {
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        get_days(props.user.username, (data) => {
+            console.log(data['data']);
+            setData(data['data']);
+        });
+    }, []);
     return(
         <div className='dashboard_screen' >
             <p className='title' >
-                Welcome {props.user.name}
+                DashBoard<span className='label'>{props.user.username}</span>
             </p>
 
-            <Table/>
+            <List
+                data={data}
+            />
 
-
+            <Link to='/add_day' className='btn add_btn'>
+                Add
+            </Link>
 
 
         </div>

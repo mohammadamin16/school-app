@@ -32,3 +32,17 @@ export function signup(name, username, password, on_response) {
     })
 }
 
+
+export function get_days(username, on_response) {
+    axios.post(url + '/study/get_days', {
+        username:username,
+    })
+    .then(function (response) {
+        let json = response['data'];
+        on_response(json);
+    })
+    .catch(function (error) {
+        console.log(error);
+    })
+}
+

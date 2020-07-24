@@ -8,6 +8,7 @@ import LoginScreen from './screens/login_screen'
 import HomeScreen from './screens/home_screen'
 import SignupScreen from './screens/signup_screen'
 import DashboardScreen from './screens/dashboard_screen'
+import AddDayScreen from "./screens/add_day_screen";
 
 export default class App extends Component {
 	 constructor(props){
@@ -31,7 +32,7 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div className="container">
+			<>
 				<BrowserRouter>
 					<Route exact path='/login' >
 						{this.state.user ?
@@ -51,16 +52,16 @@ export default class App extends Component {
 							logout={this.logout}
 						/>
 					)}/>
-
 						}
                     </Route>
+					<Route exact path='/add_day' component={AddDayScreen}/>
 
 
 					<Route exact path='/' component={HomeScreen}/>
 
 
 				</BrowserRouter>
-			</div>
+			</>
 		);
 	}
 }

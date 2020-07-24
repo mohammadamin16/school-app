@@ -17,11 +17,3 @@
     background-color: brown;
     cursor: pointer;
 }
-
-.add_btn{
-    background-color: forestgreen;
-    padding: 10px;
-    border-radius: 10px;
-    margin:5px;
-    cursor: pointer;
-}
