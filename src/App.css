@@ -3,7 +3,10 @@ a:hover, a:visited, a:link, a:active
     text-decoration: none;
     color:white;
 }
-
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 .btn{
     color:white;
@@ -40,4 +43,66 @@ a:hover, a:visited, a:link, a:active
     border-radius: 20px;
     font-size: 0.8rem;
     margin: 5px;
+}
+
+
+.cell{
+    margin: 5px;
+    border: none;
+    padding: 10px;
+    background-color: #354c74;
+    border-radius: 30px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    color: white;
+}
+
+.cell:hover{
+    background-color:#48679D ;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    width:100%;
+    /*background-color: blueviolet;*/
+    /*flex-wrap: wrap;*/
+}
+
+
+.cell-1{
+    flex: 1 0 100px;
+}
+
+.cell-2{
+    flex: 2 0 100px;
+}
+
+.cell-input{
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    width: 10ch;
+    font-size: 1rem;
+    color:white;
+}
+
+.cell-input::placeholder{
+    color: #73a7fb;
+}
+
+.cell-input:focus{
+    outline: none;
+}
+
+
+.clickable{
+    cursor: pointer;
+}
+
+.header-cell{
+    background-color: #23324c;
+    color:white;
 }

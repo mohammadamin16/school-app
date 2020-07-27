@@ -15,7 +15,8 @@
     "react-modal": "^3.11.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.0.1",
-    "react-table": "7"
+    "react-table": "7",
+    "react-router": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

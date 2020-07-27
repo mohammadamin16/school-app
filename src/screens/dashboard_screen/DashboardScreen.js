@@ -10,10 +10,9 @@ function DashboardScreen(props) {
     const [data, setData] = useState([]);
     useEffect(() => {
         get_days(props.user.username, (data) => {
-            console.log(data['data']);
             setData(data['data']);
         });
-    }, []);
+    }, [props.user.username]);
     return(
         <div className='dashboard_screen' >
             <p className='title' >
@@ -24,9 +23,19 @@ function DashboardScreen(props) {
                 data={data}
             />
 
-            <Link to='/add_day' className='btn add_btn'>
+            <Link to={{
+                pathname: "/add_day",
+                state: { create:true, items:[{}, {}, {}] }
+                }}
+                  className='btn add_btn'>
                 Add
             </Link>
+
+            <div className='btn logout_btn'
+                onClick={() => {props.logout()}}
+            >
+                Logout
+            </div>
 
 
         </div>

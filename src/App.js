@@ -10,6 +10,7 @@ import SignupScreen from './screens/signup_screen'
 import DashboardScreen from './screens/dashboard_screen'
 import AddDayScreen from "./screens/add_day_screen";
 
+
 export default class App extends Component {
 	 constructor(props){
                 super(props);
@@ -54,8 +55,12 @@ export default class App extends Component {
 					)}/>
 						}
                     </Route>
-					<Route exact path='/add_day' component={AddDayScreen}/>
-
+					<Route exact path='/add_day' render=	{() => (
+						<AddDayScreen
+							user={this.state.user}
+							logout={this.logout}
+						/>
+					)}/>
 
 					<Route exact path='/' component={HomeScreen}/>
 

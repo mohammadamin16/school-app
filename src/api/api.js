@@ -43,6 +43,22 @@ export function get_days(username, on_response) {
     })
     .catch(function (error) {
         console.log(error);
+        alert('Network Err.')
     })
 }
 
+
+export function add_day(username, items, on_response) {
+    axios.post(url + '/study/view2', {
+        username:username,
+        items:items,
+    })
+    .then(function (response) {
+        let json = response['data'];
+        on_response(json);
+    })
+    .catch(function (error) {
+        console.log(error);
+        alert('Network Err.')
+    })
+}

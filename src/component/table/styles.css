@@ -1,71 +1,12 @@
 .table{
+    display: flex;
+    flex-direction: column;
     background-color: #4cc5ff;
     padding: 10px;
     align-self: center;
     justify-self: center;
     border-radius: 30px;
+    min-width: 70%;
+    /*max-width: 90%;*/
 
-}
-
-.row{
-    display: flex;
-    flex-direction: row;
-    /*background-color: burlywood;*/
-    margin: 5px;
-}
-
-.cell{
-    margin: 5px;
-    border: none;
-    padding: 10px;
-    background-color: #354c74;
-    /*width: 100px;*/
-    border-radius: 30px;
-    text-align: center;
-}
-
-.light-hover{
-    transition: background-color 0.3s ease;
-
-}
-
-.light-hover:hover{
-    background-color:#48679D ;
-}
-
-.header{
-    background-color: #23324c;
-    color:white;
-    flex-grow: 1;
-}
-
-.cell-content{
-    padding: 0;
-    /*background-color: blueviolet;*/
-    margin: 0;
-}
-
-.cell-input{
-    background-color: transparent;
-    border: none;
-    text-align: center;
-    width: 10ch;
-    font-size: 1rem;
-}
-
-.cell-input::placeholder{
-    color: #73a7fb;
-}
-
-.cell-input:focus{
-    outline: none;
-}
-
-.col{
-    flex-grow: 1;
-}
-
-.col2{
-    flex-grow: 1;
-    background-color: brown;
 }

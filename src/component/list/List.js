@@ -8,36 +8,28 @@ export default function List(props) {
     for (let i=0; i < props.data.length; i++){
         rows.push(
             <tr className='row' key={props.data[i]['date']}>
-                <td className='cell light-hover col1 date-cell'>
+                <td className='cell clickable cell-1'>
                     <Link
+                        className=''
                         to={{
                             pathname: "/add_day",
-                            param1:'param!',
                             state: { items: props.data[i]['items'] }
                         }}
-                        className='cell-input'
-                    >
-                        {props.data[i]['date']}
-                    </Link>
-                    </td>
-                <td className='cell light-hover col1'>
-                    <div
-                        className='cell-input'
-                        placeholder={'Desc. about study'}
-                    >
-                        {props.data[i]['total_time'] + "'"}
-                    </div>
+                    >{props.data[i]['date']}</Link>
+                </td>
+                <td className='cell cell-2'>
+                    <p id='total_time'>{props.data[i]['total_time'] + "'"}</p>
                 </td>
             </tr>
         )
     }
 
     return (
-        <table className='table'>
+        <table className='list'>
             <thead>
                 <tr className='row' >
-                    <th className='cell header'>Date</th>
-                    <th className='cell header'>Time</th>
+                    <th className='cell cell-1 header-cell'>Date</th>
+                    <th className='cell cell-2 header-cell'>Total Time</th>
                 </tr>
             </thead>
             <tbody>
