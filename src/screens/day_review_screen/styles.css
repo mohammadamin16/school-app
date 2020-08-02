@@ -1,0 +1,22 @@
+.add_day_screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: x-large;
+    font-style: italic;
+    background-color: #73a7fb;
+    padding:10px;
+    border-radius: 100px;
+}
+
+.add_day_form{
+    display: flex;
+    flex-direction: column;
+    /*background-color: coral;*/
+    /*padding: 30px;*/
+    text-align: center;
+    align-items: center;
+}

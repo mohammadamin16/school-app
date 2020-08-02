@@ -1,15 +1,15 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './styles.css'
 import Cell from "../cell";
 
 
 export default function Table(props) {
     let items;
+    const readonly =  Boolean(props.readonly);
     if (props.create){
         items = [{}, {}, {}]
     }else{
         items = props.items;
-        console.log(items);
     }
     let rows = [];
     for (let i=0; i < items.length; i++){
@@ -17,6 +17,7 @@ export default function Table(props) {
             <tr className='row' key={i + ''}>
                 <td className='cell cell-1'>
                     <Cell
+                        readonly={readonly}
                         type={'text'}
                         col={0}
                         row={i}
@@ -27,6 +28,7 @@ export default function Table(props) {
                 </td>
                 <td className='cell cell-2'>
                     <Cell
+                        readonly={readonly}
                         type={'text'}
                         col={1}
                         row={i}
@@ -37,6 +39,7 @@ export default function Table(props) {
                     </td>
                 <td className='cell cell-2'>
                     <Cell
+                        readonly={readonly}
                         type={'text'}
                         col={2}
                         row={i}
@@ -47,6 +50,7 @@ export default function Table(props) {
                 </td>
                 <td className='cell cell-1'>
                     <Cell
+                        readonly={readonly}
                         type={'number'}
                         col={3}
                         row={i}

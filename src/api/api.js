@@ -39,9 +39,11 @@ export function get_days(username, on_response) {
     })
     .then(function (response) {
         let json = response['data'];
+
         on_response(json);
     })
     .catch(function (error) {
+        console.log('error');
         console.log(error);
         alert('Network Err.')
     })
@@ -62,3 +64,54 @@ export function add_day(username, items, on_response) {
         alert('Network Err.')
     })
 }
+
+export function get_students(username, on_response) {
+    axios.post(url + '/study/get_students', {
+        username:username,
+    })
+    .then(function (response) {
+        let json = response['data'];
+        console.log(json)
+        on_response(json);
+    })
+    .catch(function (error) {
+        console.log(error);
+        alert('Network Err.')
+    })
+}
+
+export function add_comment(teacher_username, student_username, text, day_pk, on_response) {
+    axios.post(url + '/study/add_comment', {
+        teacher_username:teacher_username,
+        student_username:student_username,
+        day_pk:day_pk,
+        text:text,
+    })
+    .then(function (response) {
+        let json = response['data'];
+        console.log(json)
+        on_response(json);
+    })
+    .catch(function (error) {
+        console.log(error);
+        alert('Network Err.')
+    })
+}
+
+
+export function get_comment(day_pk, on_response) {
+    axios.post(url + '/study/get_comment', {
+        day_pk:day_pk,
+    })
+    .then(function (response) {
+        let json = response['data'];
+        on_response(json);
+    })
+    .catch(function (error) {
+        console.log(error);
+        alert('Network Err.')
+    })
+}
+
+
+

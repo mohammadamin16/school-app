@@ -1,0 +1,62 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    background-color: #5e8afb;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    font-size: 1rem;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.logo{
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+}
+
+.school{
+    color: black !important;
+}
+
+.login_btn{
+    transition: color ease 200ms;
+    padding: 10px;
+}
+
+.login_btn:hover{
+    background-color: #73b462;
+    color:black;
+}
+
+.signup_btn{
+    transition: color ease 200ms;
+    padding: 10px;
+}
+
+.signup_btn:hover{
+    background-color: #8c76b4;
+    color:black;
+}
+
+.logout_btn{
+    transition: color ease 200ms;
+    padding: 10px;
+}
+
+.logout_btn:hover{
+    background-color: #b45a41;
+    color:black;
+}
+
+.username_label{
+    background-color: orange;
+    /*padding: 10px;*/
+    border-radius: 10px;
+}
+
+.just_row{
+    display: flex;
+    flex-direction: row;
+}

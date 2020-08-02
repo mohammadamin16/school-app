@@ -1,0 +1,17 @@
+.student{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 20px;
+    color:white;
+    text-align: center;
+}
+
+.student:hover{
+    background-color: #9A4FDF;
+    border: none;
+}

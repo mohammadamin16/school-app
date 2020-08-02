@@ -9,7 +9,9 @@ import HomeScreen from './screens/home_screen'
 import SignupScreen from './screens/signup_screen'
 import DashboardScreen from './screens/dashboard_screen'
 import AddDayScreen from "./screens/add_day_screen";
-
+import Header from "./component/header";
+import StudentViewScreen from "./screens/students_view_screen";
+import DayReview from "./screens/day_review_screen/DayReview";
 
 export default class App extends Component {
 	 constructor(props){
@@ -35,9 +37,13 @@ export default class App extends Component {
 		return (
 			<>
 				<BrowserRouter>
+					<Header
+						user={this.state.user}
+						logout={this.logout}
+					/>
 					<Route exact path='/login' >
 						{this.state.user ?
-							<Redirect push to={'/dashboard'}/>
+							<Redirect push to={'/'}/>
 							:
 							<LoginScreen set_user={this.login} />}
                     </Route>
@@ -50,15 +56,34 @@ export default class App extends Component {
 					<Route exact path='/dashboard' render=	{() => (
 						<DashboardScreen
 							user={this.state.user}
-							logout={this.logout}
+						/>
+					)}/>
+						}
+
+                    </Route>
+
+					<Route exact path='/student_view' >
+						{!this.state.user ?
+							<Redirect push to={'/login'}/>
+							:
+					<Route exact path='/student_view' render=	{() => (
+						<StudentViewScreen
+							user={this.state.user}
 						/>
 					)}/>
 						}
                     </Route>
-					<Route exact path='/add_day' render=	{() => (
+
+					<Route exact path='/add_day' render={() => (
 						<AddDayScreen
 							user={this.state.user}
-							logout={this.logout}
+						/>
+					)}/>
+
+
+					<Route exact path='/day_review' render={() => (
+						<DayReview
+							user={this.state.user}
 						/>
 					)}/>
 

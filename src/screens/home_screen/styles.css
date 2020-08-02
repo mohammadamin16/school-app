@@ -12,3 +12,28 @@
     text-underline: chocolate;
     text-underline-style: dash;
 }
+
+.dashboard_btn{
+    background: darkseagreen;
+    color:red;
+    padding: 10px;
+    width: fit-content;
+}
+
+.student_view_btn{
+    background: #73b462;
+    color:red;
+    padding: 10px;
+    width: fit-content;
+
+}
+
+
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+    border-radius: 10px;
+    padding: 20px;
+}

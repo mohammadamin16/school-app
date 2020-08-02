@@ -3,8 +3,8 @@ import './styles.css'
 import {Link} from "react-router-dom";
 
 export default function List(props) {
-
     let rows = [];
+    console.log(props.data)
     for (let i=0; i < props.data.length; i++){
         rows.push(
             <tr className='row' key={props.data[i]['date']}>
@@ -13,7 +13,13 @@ export default function List(props) {
                         className=''
                         to={{
                             pathname: "/add_day",
-                            state: { items: props.data[i]['items'] }
+                            state: {
+                                student_username:props.student_username,
+                                items: props.data[i]['items'],
+                                day_pk: props.data[i]['pk'],
+                                comments: props.data[i]['comments'],
+                                readonly:true,
+                            }
                         }}
                     >{props.data[i]['date']}</Link>
                 </td>

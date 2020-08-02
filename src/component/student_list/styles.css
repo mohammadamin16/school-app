@@ -1,0 +1,8 @@
+.student_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    background-color: #73b462;
+    border-radius: 10px;
+}
