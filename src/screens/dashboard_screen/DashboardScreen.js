@@ -5,6 +5,8 @@ import './styles.css'
 import List from '../../component/list/index';
 import {Link} from "react-router-dom";
 import {get_days} from "../../api/api";
+import {faPlusCircle} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function DashboardScreen(props) {
     const [data, setData] = useState([]);
@@ -33,7 +35,8 @@ function DashboardScreen(props) {
                 state: { create:true, items:[{}, {}, {}] }
                 }}
                   className='btn add_btn'>
-                Add
+                    <FontAwesomeIcon icon={faPlusCircle} />
+
             </Link>
         </div>
     )

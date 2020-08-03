@@ -14,18 +14,17 @@
 }
 
 .dashboard_btn{
-    background: darkseagreen;
+    background: #eab883;
     color:red;
     padding: 10px;
-    width: fit-content;
+    width: 200px;
 }
 
 .student_view_btn{
     background: #73b462;
     color:red;
     padding: 10px;
-    width: fit-content;
-
+    width: 200px;
 }
 
 
@@ -33,7 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: burlywood;
+    /*background-color: burlywood;*/
     border-radius: 10px;
     padding: 20px;
 }

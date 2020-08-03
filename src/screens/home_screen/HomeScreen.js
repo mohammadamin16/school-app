@@ -9,8 +9,8 @@ class HomeScreen extends Component{
             <div className='home_screen'>
                 <p className='title'>HomeScreen</p>
                 <div className='options'>
-                    <Link className='btn dashboard_btn' to={'/dashboard'} >Dashboard</Link>
-                    <Link className='btn student_view_btn' to={'/student_view'}>StudentView</Link>
+                    <Link className='btn dashboard_btn' to={'/dashboard'} >Days List</Link>
+                    <Link className='btn student_view_btn' to={'/student_view'}>Report</Link>
                 </div>
 
             </div>

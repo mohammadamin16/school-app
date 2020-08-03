@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles.css'
 import Cell from "../cell";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock } from '@fortawesome/free-solid-svg-icons'
 
 export default function Table(props) {
     let items;
@@ -15,7 +16,7 @@ export default function Table(props) {
     for (let i=0; i < items.length; i++){
         rows.push(
             <tr className='row' key={i + ''}>
-                <td className='cell cell-1'>
+                <td className='cell '>
                     <Cell
                         readonly={readonly}
                         type={'text'}
@@ -23,10 +24,11 @@ export default function Table(props) {
                         row={i}
                         setValues={props.setValues}
                         init_value={items[i]['course']}
+                        width={'10ch'}
                     />
 
                 </td>
-                <td className='cell cell-2'>
+                <td className='cell '>
                     <Cell
                         readonly={readonly}
                         type={'text'}
@@ -34,10 +36,11 @@ export default function Table(props) {
                         row={i}
                         setValues={props.setValues}
                         init_value={items[i]['tests_desc']}
+                        width={'40ch'}
                     />
 
                     </td>
-                <td className='cell cell-2'>
+                <td className='cell '>
                     <Cell
                         readonly={readonly}
                         type={'text'}
@@ -45,10 +48,11 @@ export default function Table(props) {
                         row={i}
                         setValues={props.setValues}
                         init_value={items[i]['study_desc']}
+                        width={'40ch'}
                     />
 
                 </td>
-                <td className='cell cell-1'>
+                <td className='cell '>
                     <Cell
                         readonly={readonly}
                         type={'number'}
@@ -56,6 +60,7 @@ export default function Table(props) {
                         row={i}
                         setValues={props.setValues}
                         init_value={items[i]['duration']}
+                        width={'4ch'}
                     />
 
                 </td>
@@ -68,17 +73,25 @@ export default function Table(props) {
         <table className='table'>
             <thead>
                 <tr className='row' >
-                    <th className='cell cell-1 header-cell'>
+                    <th className='cell header-cell'
+                        style={{width:'10ch'}}
+                    >
                         Subject
                     </th>
-                    <th className='cell cell-2 header-cell'>
+                    <th className='cell header-cell'
+                        style={{width:'40ch'}}
+                    >
                         Tests Description
                     </th>
-                    <th className='cell cell-2 header-cell'>
+                    <th className='cell  header-cell'
+                        style={{width:'40ch'}}
+                    >
                         Study Description
                     </th>
-                    <th className='cell cell-1 header-cell'>
-                        Duration
+                    <th className='cell header-cell'
+                        style={{width:'4ch'}}
+                    >
+                    <FontAwesomeIcon icon={faClock} />
                     </th>
                 </tr>
             </thead>
@@ -86,5 +99,6 @@ export default function Table(props) {
                 {rows}
             </tbody>
         </table>
+
     )
 }

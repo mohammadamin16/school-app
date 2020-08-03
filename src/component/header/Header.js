@@ -20,14 +20,25 @@ export default function Header(props) {
         )
     }else{
         auth=(
-            <div className='just_row'>
+
+            <div className='header_row'>
                 <Link className='btn logout_btn'
                     onClick={() => {props.logout()}}
                     to={'/login'}>
                     Logout
                 </Link>
-                <p className='logout_btn'>{props.user.username}</p>
+                <p className='white_padding'>{props.user.username}</p>
+
             </div>
+
+            // <div>
+            //     <Link className='btn login_btn'
+            //         onClick={() => {props.logout()}}
+            //         to={'/login'}>
+            //         Logout
+            //     </Link>
+            //     <p>{props.user.username}</p>
+            // </div>
         )
     }
     return (

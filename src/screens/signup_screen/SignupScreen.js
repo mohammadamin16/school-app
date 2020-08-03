@@ -51,7 +51,7 @@ class SignupScreen extends Component{
                     <input
                         className='input'
                         placeholder='password'
-
+                        type='password'
                         onChange={(input) => {this.input_change(input.target.value, 'password')}}
                     />
 

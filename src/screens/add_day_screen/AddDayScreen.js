@@ -4,7 +4,7 @@ import './styles.css'
 import Table from "../../component/table";
 import {Link} from "react-router-dom";
 import { withRouter } from "react-router";
-import {add_day} from "../../api/api";
+import {add_day, edit_day} from "../../api/api";
 import Comments from "../../component/comments";
 
 
@@ -39,9 +39,22 @@ function AddDayScreen(props) {
                     Submit
                 </div>
 
+
+                <div className='btn add_btn'
+                    onClick={() => {
+                        edit_day(props.user.username,props.location.state.day_pk , values, (response) => {
+                            console.log(response['msg'])
+                            props.history.push('/dashboard')
+                        })
+                    }}
+                >
+                    Edit
+                </div>
+
                 <Link to='/dashboard' className='btn back_btn'>
                     Back
                 </Link>
+
                 <Comments
                     student_user={props.location.state.student_username}
                     comments={props.location.state.comments}

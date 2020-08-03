@@ -51,7 +51,7 @@ export function get_days(username, on_response) {
 
 
 export function add_day(username, items, on_response) {
-    axios.post(url + '/study/view2', {
+    axios.post(url + '/study/add_day', {
         username:username,
         items:items,
     })
@@ -64,6 +64,24 @@ export function add_day(username, items, on_response) {
         alert('Network Err.')
     })
 }
+
+
+export function edit_day(username, day_pk, items, on_response) {
+    axios.post(url + '/study/edit_day', {
+        username:username,
+        day_pk:day_pk,
+        items:items,
+    })
+    .then(function (response) {
+        let json = response['data'];
+        on_response(json);
+    })
+    .catch(function (error) {
+        console.log(error);
+        alert('Network Err.')
+    })
+}
+
 
 export function get_students(username, on_response) {
     axios.post(url + '/study/get_students', {

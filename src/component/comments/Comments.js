@@ -7,9 +7,7 @@ export default function Comments(props) {
     const [text, setText] = useState('')
     useEffect(() => {
         get_comment(props.day_pk, (data) => {
-            console.log(data['success'])
             if (data['success']){
-                console.log(data)
                 setComment(data['data'])
             }
         })
@@ -17,7 +15,12 @@ export default function Comments(props) {
     if (comment.text == '' && props.user.type == "S"){
         return (<p>No Comments yet</p>)
     }
-
+    let disable;
+    if (props.user.type == 'S'){
+        disable=true;
+    }else{
+        disable=false
+    }
 
     return(
         <div className='comments'>
@@ -26,18 +29,25 @@ export default function Comments(props) {
                 <input
                     placeholder='insert your comment'
                     className='comment_body input_comment'
+                    disabled={disable}
                     defaultValue={comment.text}
                     onChange={(event) => {setText(event.target.value)}}
                 />
-                <div
-                    className='user_avatar clickable'
-                    onClick={() => {
-                        add_comment(props.user.username, props.student_username, text, props.day_pk, (data) => {
-                            console.log(data)
-                            alert(data['msg'])
-                        })
-                    }}
-                >Send</div>
+                {() => {
+                    if (props.user.type == "T"){
+                        return (
+                            <div
+                                className='user_avatar clickable'
+                                onClick={() => {
+                                    add_comment(props.user.username, props.student_username, text, props.day_pk, (data) => {
+                                        console.log(data)
+                                        alert(data['msg'])
+                                    })
+                                }}
+                            >Send</div>
+                            )
+                    }
+                }}
             </div>
         </div>
     )

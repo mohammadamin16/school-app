@@ -46,12 +46,13 @@ class LoginScreen extends Component{
                         <input
                             className='input'
                             placeholder='password'
-
+                            type='password'
                             onChange={(input) => {this.input_change(input.target.value, 'password')}}
                         />
 
                         <div
                             className='submit_btn'
+                            tabIndex={0}
                             onClick={() => {
                                 login(this.state.username, this.state.password, this.on_click)
                             }}>
