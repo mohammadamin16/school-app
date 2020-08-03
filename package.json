@@ -2,7 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "engines": {
-    "node": "12.x"
+    "node": "14.7.x"
   },
   "private": true,
   "homepage": "https://mohammadamin16.github.io/school-app/",
