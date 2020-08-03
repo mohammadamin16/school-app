@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/school-app/static/css/main.de67bb63.chunk.css",
-    "main.js": "/school-app/static/js/main.17819a4a.chunk.js",
-    "main.js.map": "/school-app/static/js/main.17819a4a.chunk.js.map",
+    "main.js": "/school-app/static/js/main.2a180b60.chunk.js",
+    "main.js.map": "/school-app/static/js/main.2a180b60.chunk.js.map",
     "runtime~main.js": "/school-app/static/js/runtime~main.d30b6eb1.js",
     "runtime~main.js.map": "/school-app/static/js/runtime~main.d30b6eb1.js.map",
     "static/js/2.fafca8a5.chunk.js": "/school-app/static/js/2.fafca8a5.chunk.js",
     "static/js/2.fafca8a5.chunk.js.map": "/school-app/static/js/2.fafca8a5.chunk.js.map",
     "index.html": "/school-app/index.html",
-    "precache-manifest.1717ed61b4eb2fd00808bde55fd6c270.js": "/school-app/precache-manifest.1717ed61b4eb2fd00808bde55fd6c270.js",
+    "precache-manifest.084778af90bd3bffe47f930e8f8297ff.js": "/school-app/precache-manifest.084778af90bd3bffe47f930e8f8297ff.js",
     "service-worker.js": "/school-app/service-worker.js",
     "static/css/main.de67bb63.chunk.css.map": "/school-app/static/css/main.de67bb63.chunk.css.map"
   }
