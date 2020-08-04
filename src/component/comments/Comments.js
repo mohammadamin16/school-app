@@ -15,11 +15,23 @@ export default function Comments(props) {
     if (comment.text == '' && props.user.type == "S"){
         return (<p>No Comments yet</p>)
     }
-    let disable;
+    let disable, send_btn;
     if (props.user.type == 'S'){
         disable=true;
+        send_btn=(<div />);
     }else{
         disable=false
+        send_btn=(
+            <div
+                className='user_avatar clickable'
+                    onClick={() => {
+                        add_comment(props.user.username, props.student_username, text, props.day_pk, (data) => {
+                        console.log(data)
+                        alert(data['msg'])
+                    })
+                }}
+        >Send</div>
+    );
     }
 
     return(
@@ -33,21 +45,8 @@ export default function Comments(props) {
                     defaultValue={comment.text}
                     onChange={(event) => {setText(event.target.value)}}
                 />
-                {() => {
-                    if (props.user.type == "T"){
-                        return (
-                            <div
-                                className='user_avatar clickable'
-                                onClick={() => {
-                                    add_comment(props.user.username, props.student_username, text, props.day_pk, (data) => {
-                                        console.log(data)
-                                        alert(data['msg'])
-                                    })
-                                }}
-                            >Send</div>
-                            )
-                    }
-                }}
+                {send_btn}
+
             </div>
         </div>
     )

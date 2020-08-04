@@ -6,7 +6,8 @@
     align-self: center;
     justify-self: center;
     border-radius: 30px;
-    min-width: 70%;
+    width: 70%;
+    overflow: hidden;
     /*max-width: 90%;*/
 
 }

@@ -33,7 +33,7 @@ export default function Cell(props) {
             className='cell-input'
             onChange={handleChange}
             defaultValue={props.init_value}
-            style={{width:props.width}}
+            // style={{width:props.width}}
             type={props.type}
         />
     )
