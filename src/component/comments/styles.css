@@ -25,7 +25,19 @@
     border-radius: 100px;
     background-color: #4cff64;
     color:black;
+    font-size: 1vw;
+}
 
+.send_btn{
+    background-color: #007400;
+    color:white;
+    transition: background-color, color ease 200ms;
+    /*transition: color ease 200ms;*/
+
+}
+.send_btn:hover{
+    background-color: #73b462;
+    color:black;
 }
 
 .comment_body{

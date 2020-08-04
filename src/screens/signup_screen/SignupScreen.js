@@ -60,7 +60,7 @@ class SignupScreen extends Component{
                         onClick={() => {
                             signup(this.state.name, this.state.username, this.state.password, this.on_click)
                         }}>
-                        <p>Login</p>
+                        <p>SignUp</p>
                     </div>
                 </div>
             </div>

@@ -15,18 +15,3 @@
     /*background-color: #4766ff;*/
 }
 
-
-.submit_btn{
-    width: 90px;
-    border-radius: 15px;
-    padding: 10px;
-    text-align: center;
-
-    background-color: darkcyan;
-    border-color: transparent;
-
-    font-size: 1.5rem;
-    font-style: italic;
-                cursor: pointer;
-
- }

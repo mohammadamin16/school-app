@@ -118,9 +118,20 @@ input::-webkit-inner-spin-button {
     font-style: italic;
     margin-bottom: 50px;
     margin-top: 50px;
-    width: 100%;
+    width: 60%;
     outline: none;
 }
 
+.submit_btn{
+    width: 100px;
+    border-radius: 15px;
+    /*margin-top: 50px;*/
+    text-align: center;
 
+    background-color: #2fbdbd;
+    border-color: transparent;
+
+    font-size: 1rem;
+    cursor: pointer;
+ }
 

@@ -3,6 +3,8 @@ import './styles.css'
 import Cell from "../cell";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-solid-svg-icons'
+import { faBookReader } from '@fortawesome/free-solid-svg-icons'
+import DropdownMenu from "../dropdown";
 
 export default function Table(props) {
     let items;
@@ -19,9 +21,8 @@ export default function Table(props) {
                 <td className='cell'
                     style={{width:'10%'}}
                 >
-                    <Cell
+                    <DropdownMenu
                         readonly={readonly}
-                        type={'text'}
                         col={0}
                         row={i}
                         setValues={props.setValues}
@@ -81,7 +82,8 @@ export default function Table(props) {
                     <th className='cell header-cell'
                         style={{width:'10%'}}
                     >
-                        Subject
+                    <FontAwesomeIcon icon={faBookReader} />
+
                     </th>
                     <th className='cell header-cell'
                         style={{width:'40%'}}

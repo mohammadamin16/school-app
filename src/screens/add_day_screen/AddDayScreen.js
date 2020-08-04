@@ -7,6 +7,9 @@ import { withRouter } from "react-router";
 import {add_day, edit_day} from "../../api/api";
 import Comments from "../../component/comments";
 
+import {faEdit, faArrowAltCircleLeft, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 
 function AddDayScreen(props) {
     let init_values = [{}, {}, {}];
@@ -17,7 +20,7 @@ function AddDayScreen(props) {
     const [values , setValues] = useState(init_values);
     const readonly = Boolean(props.readonly)
     let btn;
-    if (props.location.state.create){
+    if (props.location.state.create && props.user.type !== 'T'){
         btn = (
                 <div className='btn add_btn'
                     onClick={() => {
@@ -28,9 +31,9 @@ function AddDayScreen(props) {
                         })
                     }}
                 >
-                    Submit
+                    <FontAwesomeIcon icon={faPaperPlane} />
                 </div>)
-    }else{
+    }else if(props.user.type !== 'T'){
         btn = (
             <div className='btn add_btn'
                 onClick={() => {
@@ -41,12 +44,13 @@ function AddDayScreen(props) {
                     })
                 }}
             >
-                Edit
+                <FontAwesomeIcon icon={faEdit} />
             </div>
         );
+    }else{
+        btn=(<div />)
     }
-
-
+    let back_to;
     return(
         <div className='add_day_screen' >
             <p className='title' >
@@ -59,12 +63,16 @@ function AddDayScreen(props) {
                     setValues={setValues}
                     readonly={readonly}
                 />
-
             {btn}
+                <div
+                    className='btn back_btn'
+                    onClick={() => {
+                        props.history.goBack()
+                    }}
+                >
 
-                <Link to='/dashboard' className='btn back_btn'>
-                    Back
-                </Link>
+                    <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+                </div>
 
                 <Comments
                     student_user={props.location.state.student_username}

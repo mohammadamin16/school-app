@@ -9,18 +9,6 @@
     font-size: x-large;
 }
 
-.input{
-    background-color: burlywood;
-    border-radius: 15px;
-    border-color: transparent;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5rem;
-    font-style: italic;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    width: 100%;
-}
 
 .form{
     display: flex;
@@ -32,17 +20,3 @@
 }
 
 
-.submit_btn{
-    width: 90px;
-    border-radius: 15px;
-    padding: 10px;
-    text-align: center;
-
-    background-color: darkcyan;
-    border-color: transparent;
-
-    font-size: 1.5rem;
-    font-style: italic;
-                cursor: pointer;
-
- }

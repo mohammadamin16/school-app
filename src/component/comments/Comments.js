@@ -23,7 +23,7 @@ export default function Comments(props) {
         disable=false
         send_btn=(
             <div
-                className='user_avatar clickable'
+                className='user_avatar clickable send_btn'
                     onClick={() => {
                         add_comment(props.user.username, props.student_username, text, props.day_pk, (data) => {
                         console.log(data)
@@ -37,7 +37,7 @@ export default function Comments(props) {
     return(
         <div className='comments'>
             <div className='comment_row'>
-                <div className='user_avatar'>{comment.user.username}</div>
+                <div className='user_avatar'>{comment.user.name}</div>
                 <input
                     placeholder='insert your comment'
                     className='comment_body input_comment'
