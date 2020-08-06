@@ -16,7 +16,6 @@ class LoginScreen extends Component{
     on_click = (json) => {
         if (json['success']) {
             this.props.set_user(json['data']['user']);
-
             } else{
             alert(json['msg'])
         }

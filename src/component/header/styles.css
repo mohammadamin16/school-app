@@ -11,6 +11,9 @@
 }
 
 .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /*font-style: italic;*/
     font-weight: bold;
     color: black;
@@ -43,11 +46,11 @@
 
 .logout_btn{
     /*padding: 5px;*/
-    transition: color ease 200ms;
+    transition: color ease 300ms;
 }
 
 .logout_btn:hover{
-    background-color: #b45a41;
+    background-color: #f5977e;
     color:black;
 }
 
@@ -70,8 +73,13 @@
 }
 
 .white_padding{
-    background-color: white;
-    padding: 5px;
+    background-color: #d0eeff;
+    padding: 5px 10px;
     border-radius: 100px ;
 }
 
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}

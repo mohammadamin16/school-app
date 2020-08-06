@@ -12,6 +12,7 @@ import AddDayScreen from "./screens/add_day_screen";
 import Header from "./component/header";
 import StudentViewScreen from "./screens/students_view_screen";
 import DayReview from "./screens/day_review_screen/DayReview";
+import HelpScreen from "./screens/help_screen";
 
 export default class App extends Component {
 	 constructor(props){
@@ -49,6 +50,7 @@ export default class App extends Component {
                     </Route>
 
 					<Route exact path='/signup' component={SignupScreen}/>
+					<Route exact path='/help' component={HelpScreen}/>
 					<Route exact path='/dashboard' >
 						{!this.state.user ?
 							<Redirect push to={'/login'}/>

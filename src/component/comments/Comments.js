@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react';
 import './styles.css'
 import {add_comment, get_comment} from "../../api/api";
 import words from "../../texts/words";
+import {faPaperPlane} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default function Comments(props) {
     const [comment, setComment] = useState({user:'', date:'', text:''})
@@ -13,11 +15,11 @@ export default function Comments(props) {
             }
         })
     }, [])
-    if (comment.text == '' && props.user.type == "S"){
+    if (comment.text === '' && props.user.type === "S"){
         return (<p>{words['no_comments']}</p>)
     }
     let disable, send_btn;
-    if (props.user.type == 'S'){
+    if (props.user.type === 'S'){
         disable=true;
         send_btn=(<div />);
     }else{
@@ -27,11 +29,12 @@ export default function Comments(props) {
                 className='user_avatar clickable send_btn'
                     onClick={() => {
                         add_comment(props.user.username, props.student_username, text, props.day_pk, (data) => {
-                        console.log(data)
                         alert(data['msg'])
                     })
                 }}
-        >Send</div>
+        >
+            <FontAwesomeIcon icon={faPaperPlane} />
+        </div>
     );
     }
 

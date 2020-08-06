@@ -6,8 +6,9 @@ import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default function List(props) {
+    const data = props.data || [];
     let rows = [];
-    for (let i=0; i < props.data.length; i++){
+    for (let i=0; i < data.length; i++){
         rows.push(
             <tr className='row' key={props.data[i]['date']}>
                 <td className='cell clickable cell-1'>

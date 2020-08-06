@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 // const url = 'http://localhost:8000';
-const url = 'https://guarded-taiga-94931.herokuapp.com';
-// const url = 'http://192.168.1.180:8000';
+// const url = 'https://guarded-taiga-94931.herokuapp.com';
+const url = 'http://192.168.1.180:8000';
 
 export function login(username, password, on_response) {
     axios.post(url + '/accounts/login', {
@@ -144,6 +144,20 @@ export function get_date(on_response) {
         alert('Network Err.')
     })
 }
+
+
+export function get_teachers(on_response) {
+    axios.post(url + '/accounts/get_teachers')
+    .then(function (response) {
+        let json = response['data'];
+        on_response(json);
+    })
+    .catch(function (error) {
+        console.log(error);
+        alert('Network Err.')
+    })
+}
+
 
 
 

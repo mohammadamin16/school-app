@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import './styles.css'
 import {Link} from "react-router-dom";
 import words from '../../texts/words'
+import logo from '../../images/logo192.png'
 
 export default function Header(props) {
     let auth;
@@ -36,7 +37,13 @@ export default function Header(props) {
             {auth}
             <Link
                 to='/'
-                className='logo school'>{words['logo']}</Link>
+                className='logo school'>
+                {words['logo']}
+                <img
+                    className='icon'
+                    src={logo}
+                />
+            </Link>
         </div>
     )
 }

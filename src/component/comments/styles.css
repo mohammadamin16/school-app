@@ -20,12 +20,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 70px ;
-    min-height: 70px ;
-    border-radius: 100px;
+    /*width: 70px ;*/
+    /*height: 70px ;*/
+    border-radius: 20px;
     background-color: #4cff64;
     color:black;
-    font-size: 1vw;
+    font-size: 2vw;
+    padding: 10px;
+
 }
 
 .send_btn{
@@ -52,6 +54,7 @@
     margin-right: 10px;
     background-color: #247b30;
     font-size: 1rem !important;
+    direction: rtl;
 }
 
 .input_comment{

@@ -1,15 +1,25 @@
 import React, {Component} from 'react';
 
 import './styles.css'
-import { signup } from '../../api/api'
+import {get_teachers, signup} from '../../api/api'
 import words from "../../texts/words";
+import Student from "../../component/student";
+import Teacher from "../../component/teacher";
 
 class SignupScreen extends Component{
     state={
         name:'',
         username:'',
         password:'',
+        teachers:[]
     };
+    componentDidMount() {
+        get_teachers((response) => {
+            console.log(response['data'])
+            this.setState({teachers:response['data']})
+        })
+    }
+
     on_click = (json) => {
         if (json['success']) {
             console.log(json['data']);
@@ -56,6 +66,7 @@ class SignupScreen extends Component{
                         onChange={(input) => {this.input_change(input.target.value, 'password')}}
                     />
 
+
                     <div
                         className='submit_btn'
                         onClick={() => {
@@ -63,6 +74,7 @@ class SignupScreen extends Component{
                         }}>
                         {words['signup']}
                     </div>
+
                 </div>
             </div>
         )
