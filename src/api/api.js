@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 // const url = 'http://localhost:8000';
-const url = 'https://guarded-taiga-94931.herokuapp.com';
+// const url = 'https://guarded-taiga-94931.herokuapp.com';
+const url = 'http://192.168.1.180:8000';
 
 export function login(username, password, on_response) {
     axios.post(url + '/accounts/login', {
@@ -122,6 +123,18 @@ export function get_comment(day_pk, on_response) {
     axios.post(url + '/study/get_comment', {
         day_pk:day_pk,
     })
+    .then(function (response) {
+        let json = response['data'];
+        on_response(json);
+    })
+    .catch(function (error) {
+        console.log(error);
+        alert('Network Err.')
+    })
+}
+
+export function get_date(on_response) {
+    axios.post(url + '/back/get_today')
     .then(function (response) {
         let json = response['data'];
         on_response(json);

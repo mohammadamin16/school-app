@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*@font-face {*/
+/*  font-family: 'b_nazanin';*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  src: url('fonts/BNazanin/BNazanin.woff'); !* IE9 Compat Modes *!*/
+/* }*/
+
+
+/*@font-face {*/
+/*  font-family: 'sade';*/
+/*  !*font-style: normal;*!*/
+/*  !*font-weight: 400;*!*/
+/*  src: url('fonts/A-Sade/A-Sade.ttf'); !* IE9 Compat Modes *!*/
+/* }*/
+
+
+/** {*/
+/*  font-family: sade;*/
+/*  font-size: 1.2rem !important;*/
+/*}*/

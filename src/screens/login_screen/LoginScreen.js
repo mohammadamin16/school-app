@@ -37,7 +37,7 @@ class LoginScreen extends Component{
             <div className={'login_screen'}>
                 <p className={'title'}>LoginScreen</p>
 
-                <div className='form'>
+                <div className='login_form'>
                         <input
                             className='input'
                             placeholder='username'

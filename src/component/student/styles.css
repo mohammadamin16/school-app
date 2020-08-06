@@ -2,16 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
-    width: 200px;
-    height: 100px;
+    background-color: #ffe84d;
+    /*width: 200px;*/
+    /*height: 100px;*/
     margin: 10px;
+    padding: 5px 20px;
     border-radius: 20px;
-    color:white;
+    color:black !important;
     text-align: center;
+    transition: background-color ease 300ms;
 }
 
 .student:hover{
-    background-color: #9A4FDF;
+    background-color: #eab883;
     border: none;
 }

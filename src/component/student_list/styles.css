@@ -1,8 +1,11 @@
 .student_list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
     width: 70%;
-    background-color: #73b462;
+    height: 400px;
+    background-color: lightblue;
     border-radius: 10px;
 }

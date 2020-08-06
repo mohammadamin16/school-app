@@ -36,7 +36,7 @@ export default function Header(props) {
             {auth}
             <Link
                 to='/'
-                className='logo school'>School</Link>
+                className='logo school'>دفترچه</Link>
         </div>
     )
 }

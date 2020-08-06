@@ -6,8 +6,16 @@
     align-self: center;
     justify-self: center;
     border-radius: 30px;
-    width: 70%;
-    overflow: hidden;
+    width: 95%;
+    /*overflow: hidden;*/
     /*max-width: 90%;*/
 
 }
+
+
+@media screen and (min-width: 600px) {
+    .table {
+        width: 70%;
+    }
+}
+

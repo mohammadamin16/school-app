@@ -4,7 +4,7 @@ import './styles.css'
 import Table from "../../component/table";
 import {Link} from "react-router-dom";
 import { withRouter } from "react-router";
-import {add_day, edit_day} from "../../api/api";
+import {add_day, edit_day, get_date} from "../../api/api";
 import Comments from "../../component/comments";
 
 import {faEdit, faArrowAltCircleLeft, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
@@ -50,11 +50,16 @@ function AddDayScreen(props) {
     }else{
         btn=(<div />)
     }
-    let back_to;
+    const [date, setDate] = useState(props.location.state.date)
+
+    if(props.location.state.date === undefined){
+        console.log('undefined')
+        get_date((data) => {setDate(data)})
+    }
     return(
         <div className='add_day_screen' >
             <p className='title' >
-                Add Day Screen <span className='label'>Today</span>
+                Add Day Screen <span className='label'>{date}</span>
             </p>
 
                 <Table

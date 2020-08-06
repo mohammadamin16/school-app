@@ -19,6 +19,7 @@ export default function List(props) {
                                 student_username:props.student_username,
                                 items: props.data[i]['items'],
                                 day_pk: props.data[i]['pk'],
+                                date: props.data[i]['date'],
                                 comments: props.data[i]['comments'],
                                 readonly:true,
                             }

@@ -35,6 +35,7 @@ export default function Cell(props) {
             defaultValue={props.init_value}
             // style={{width:props.width}}
             type={props.type}
+            step={5}
         />
     )
 }

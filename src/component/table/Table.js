@@ -4,7 +4,7 @@ import Cell from "../cell";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-solid-svg-icons'
 import { faBookReader } from '@fortawesome/free-solid-svg-icons'
-import DropdownMenu from "../dropdown";
+import MyDropdownMenu from "../dropdown";
 
 export default function Table(props) {
     let items;
@@ -19,9 +19,9 @@ export default function Table(props) {
         rows.push(
             <tr className='row' key={i + ''}>
                 <td className='cell'
-                    style={{width:'10%'}}
+                    style={{width:'20%'}}
                 >
-                    <DropdownMenu
+                    <MyDropdownMenu
                         readonly={readonly}
                         col={0}
                         row={i}
@@ -80,7 +80,7 @@ export default function Table(props) {
             <thead>
                 <tr className='row' >
                     <th className='cell header-cell'
-                        style={{width:'10%'}}
+                        style={{width:'20%'}}
                     >
                     <FontAwesomeIcon icon={faBookReader} />
 
