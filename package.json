@@ -1,9 +1,6 @@
 {
   "name": "app",
   "version": "0.1.0",
-  "engines": {
-    "node": "14.x"
-  },
   "private": true,
   "homepage": "https://infinite-wave-66798.herokuapp.com/",
   "dependencies": {
