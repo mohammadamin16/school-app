@@ -87,7 +87,17 @@ export default class App extends Component {
 						/>
 					)}/>
 
-					<Route exact path='/' component={HomeScreen}/>
+					<Route exact path='/' render={() => {
+						try {
+							if (this.state.user.type === 'S'){
+								return (<Redirect to={'/dashboard'} />)
+							}else{
+								return (<Redirect to={'/student_view'} />)
+							}
+						}catch (e){
+								return (<Redirect to={'/login'} />)
+						}
+					}}/>
 
 
 				</BrowserRouter>

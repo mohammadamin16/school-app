@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 import {get_days} from "../../api/api";
 import {faPlusCircle} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import words from "../../texts/words";
 
 function DashboardScreen(props) {
     const [data, setData] = useState([]);
@@ -21,7 +22,10 @@ function DashboardScreen(props) {
     }, []);
     return(
         <div className='dashboard_screen' >
-            <p className='title'>DashBoard<span className='label'>{props.user.username}</span></p>
+            <p className='title'>
+                {words['dashboard_screen']}
+
+            </p>
 
             <List
                 user={props.user}

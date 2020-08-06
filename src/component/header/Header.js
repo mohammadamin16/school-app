@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import './styles.css'
 import {Link} from "react-router-dom";
-
+import words from '../../texts/words'
 
 export default function Header(props) {
     let auth;
@@ -10,11 +10,11 @@ export default function Header(props) {
             <div>
                 <Link className='btn login_btn'
                     to={'/login'}>
-                    Login
+                    {words['login']}
                 </Link>
                 <Link className='btn signup_btn'
                     to={'/signup'}>
-                    SignUp
+                    {words['signup']}
                 </Link>
             </div>
         )
@@ -25,9 +25,9 @@ export default function Header(props) {
                 <Link className='btn logout_btn'
                     onClick={() => {props.logout()}}
                     to={'/login'}>
-                    Logout
+                    {words['logout']}
                 </Link>
-                <p className='white_padding'>{props.user.username}</p>
+                <p className='white_padding'>{props.user.name}</p>
             </div>
         )
     }
@@ -36,7 +36,7 @@ export default function Header(props) {
             {auth}
             <Link
                 to='/'
-                className='logo school'>دفترچه</Link>
+                className='logo school'>{words['logo']}</Link>
         </div>
     )
 }

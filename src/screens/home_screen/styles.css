@@ -5,12 +5,6 @@
     justify-content: center;
 }
 
-.title {
-    font-size: x-large;
-    font-style: italic;
-    text-underline: chocolate;
-    text-underline-style: dash;
-}
 
 .dashboard_btn{
     background: #eab883;

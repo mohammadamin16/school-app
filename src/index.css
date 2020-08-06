@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #d0eeff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,23 +13,23 @@ code {
     monospace;
 }
 
-/*@font-face {*/
-/*  font-family: 'b_nazanin';*/
-/*  font-style: normal;*/
-/*  font-weight: 400;*/
-/*  src: url('fonts/BNazanin/BNazanin.woff'); !* IE9 Compat Modes *!*/
-/* }*/
+@font-face {
+  font-family: 'b_nazanin';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/BNazanin/BNazanin.woff'); /* IE9 Compat Modes */
+ }
 
 
-/*@font-face {*/
-/*  font-family: 'sade';*/
-/*  !*font-style: normal;*!*/
-/*  !*font-weight: 400;*!*/
-/*  src: url('fonts/A-Sade/A-Sade.ttf'); !* IE9 Compat Modes *!*/
-/* }*/
+@font-face {
+  font-family: 'sade';
+  /*font-style: normal;*/
+  /*font-weight: 400;*/
+  src: url('fonts/A-Sade/A-Sade.ttf'); /* IE9 Compat Modes */
+ }
 
 
-/** {*/
-/*  font-family: sade;*/
-/*  font-size: 1.2rem !important;*/
-/*}*/
+* {
+  font-family:  b_nazanin;
+  font-size: large;
+}

@@ -9,6 +9,7 @@ import Comments from "../../component/comments";
 
 import {faEdit, faArrowAltCircleLeft, faPaperPlane} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import words from "../../texts/words";
 
 
 function AddDayScreen(props) {
@@ -59,7 +60,8 @@ function AddDayScreen(props) {
     return(
         <div className='add_day_screen' >
             <p className='title' >
-                Add Day Screen <span className='label'>{date}</span>
+                <span className='label'>{date}</span>
+                {words['add_day_screen']}
             </p>
 
                 <Table

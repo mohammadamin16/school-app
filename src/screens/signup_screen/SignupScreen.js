@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import './styles.css'
 import { signup } from '../../api/api'
+import words from "../../texts/words";
 
 class SignupScreen extends Component{
     state={
@@ -35,22 +36,22 @@ class SignupScreen extends Component{
     render() {
         return(
             <div className={'login_screen'}>
-                <p className={'title'}>SignupScreen</p>
+                <p className={'title'}>{words['signup_screen']}</p>
 
-                <div className='form'>
+                <div className='login_form'>
                     <input
                         className='input'
-                        placeholder='full name'
+                            placeholder={words['full_name']}
                         onChange={(input) => {this.input_change(input.target.value, 'name')}}
                     />
                     <input
                         className='input'
-                        placeholder='username'
+                        placeholder={words['username']}
                         onChange={(input) => {this.input_change(input.target.value, 'username')}}
                     />
                     <input
                         className='input'
-                        placeholder='password'
+                        placeholder={words['password']}
                         type='password'
                         onChange={(input) => {this.input_change(input.target.value, 'password')}}
                     />
@@ -60,7 +61,7 @@ class SignupScreen extends Component{
                         onClick={() => {
                             signup(this.state.name, this.state.username, this.state.password, this.on_click)
                         }}>
-                        <p>SignUp</p>
+                        {words['signup']}
                     </div>
                 </div>
             </div>

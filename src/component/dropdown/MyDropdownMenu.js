@@ -10,11 +10,13 @@ import {
 } from '@trendmicro/react-dropdown';
 import '@trendmicro/react-buttons/dist/react-buttons.css';
 import '@trendmicro/react-dropdown/dist/react-dropdown.css';
+import words from "../../texts/words";
 
 
 export default function MyDropdownMenu(props) {
     const [value, setValue] = useState(props.init_value);
-    const options = ['Farsi', 'Arabi', 'Maaref', 'Zaban' , '|' ,'Hesaban', 'Hendese', 'Gosasteh', 'Fizik', 'Shimi'];
+    // const options = ['Farsi', 'Arabi', 'Maaref', 'Zaban' , '|' ,'Hesaban', 'Hendese', 'Gosasteh', 'Fizik', 'Shimi'];
+    const options = words['subjects']
     var handleChange;
     let disable;
     if (props.readonly){

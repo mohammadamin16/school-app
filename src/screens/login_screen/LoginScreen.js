@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import './styles.css'
 import { login } from '../../api/api'
+import words from "../../texts/words";
 
 class LoginScreen extends Component{
     constructor(props) {
@@ -35,17 +36,17 @@ class LoginScreen extends Component{
     render() {
         return(
             <div className={'login_screen'}>
-                <p className={'title'}>LoginScreen</p>
+                <p className='title'>{words['login_screen']}</p>
 
                 <div className='login_form'>
                         <input
                             className='input'
-                            placeholder='username'
+                            placeholder={words['username']}
                             onChange={(input) => {this.input_change(input.target.value, 'username')}}
                         />
                         <input
                             className='input'
-                            placeholder='password'
+                            placeholder={words['password']}
                             type='password'
                             onChange={(input) => {this.input_change(input.target.value, 'password')}}
                         />
@@ -56,7 +57,7 @@ class LoginScreen extends Component{
                             onClick={() => {
                                 login(this.state.username, this.state.password, this.on_click)
                             }}>
-                            <p>Login</p>
+                            {words['login']}
                         </div>
                 </div>
             </div>

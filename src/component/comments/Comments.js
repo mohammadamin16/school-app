@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './styles.css'
 import {add_comment, get_comment} from "../../api/api";
+import words from "../../texts/words";
 
 export default function Comments(props) {
     const [comment, setComment] = useState({user:'', date:'', text:''})
@@ -13,7 +14,7 @@ export default function Comments(props) {
         })
     }, [])
     if (comment.text == '' && props.user.type == "S"){
-        return (<p>No Comments yet</p>)
+        return (<p>{words['no_comments']}</p>)
     }
     let disable, send_btn;
     if (props.user.type == 'S'){

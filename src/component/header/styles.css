@@ -6,14 +6,15 @@
     justify-content: space-between;
     height: 50px;
     font-size: 1rem;
-    padding-right: 30px;
-    padding-left: 30px;
+    /*padding-right: 30px;*/
+    /*padding-left: 30px;*/
 }
 
 .logo{
-    font-style: italic;
+    /*font-style: italic;*/
     font-weight: bold;
     color: black;
+    padding: 10px;
 }
 
 .school{
@@ -41,7 +42,7 @@
 }
 
 .logout_btn{
-    padding: 5px !important;
+    /*padding: 5px;*/
     transition: color ease 200ms;
 }
 
@@ -63,8 +64,9 @@
 
 .header_row{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    /*background-color: red !important;*/
 }
 
 .white_padding{

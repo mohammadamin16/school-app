@@ -11,10 +11,13 @@ export default function Cell(props) {
     }else {
         handleChange = (event) => {
             let text = event.target.value;
+            if (props.type === 'number' && text === ''){
+                text = 0;
+            }
             setValue(text);
             props.setValues((prevValues) => {
-            prevValues[props.row][props.col] = text;
-            return prevValues;
+                prevValues[props.row][props.col] = text;
+                return prevValues;
             });
         };
         disable=false
