@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 // const url = 'http://localhost:8000';
-// const url = 'https://guarded-taiga-94931.herokuapp.com';
-const url = 'http://192.168.1.180:8000';
+// const url = 'http://192.168.1.180:8000';
+const url = 'https://daftarchak-backend.herokuapp.com';
 
 export function login(username, password, on_response) {
     axios.post(url + '/accounts/login', {
