@@ -34,7 +34,7 @@ class LoginScreen extends Component{
     };
     render() {
         return(
-            <div className={'login_screen'}>
+            <div className='login_screen'>
                 <p className='title'>{words['login_screen']}</p>
 
                 <div className='login_form'>

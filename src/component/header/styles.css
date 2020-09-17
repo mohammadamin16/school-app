@@ -1,85 +1,52 @@
 .header{
     display: flex;
     flex-direction: row;
-    background-color: #49ace2;
+    margin:0 10px;
+    padding: 0 10px;
+    background-color: #8FC5F2;
+    border-radius: 100px;
+    height:70px;
+    justify-content: center;
+    align-content: center;
+    box-shadow: 0 0 20px 1px  black;
+}
+
+.auth_part{
+    flex:1;
+    /*background-color: #eab883;*/
+    justify-content: flex-start;
     align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    font-size: 1rem;
-    /*padding-right: 30px;*/
-    /*padding-left: 30px;*/
+}
+
+.logo_part{
+    flex:1;
+    /*background-color: #007400;*/
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*font-style: italic;*/
-    font-weight: bold;
-    color: black;
-    padding: 10px;
+    width: 50px;
+    height: 50px;
 }
-
-.school{
-    color: black !important;
-}
-
-.login_btn{
-    transition: color ease 200ms;
-    padding: 10px;
-}
-
-.login_btn:hover{
-    background-color: #73b462;
-    color:black;
-}
-
-.signup_btn{
-    transition: color ease 200ms;
-    padding: 10px;
-}
-
-.signup_btn:hover{
-    background-color: #8c76b4;
-    color:black;
-}
-
-.logout_btn{
-    /*padding: 5px;*/
-    transition: color ease 300ms;
-}
-
-.logout_btn:hover{
-    background-color: #f5977e;
-    color:black;
-}
-
-.username_label{
-    background-color: orange;
-    /*padding: 10px;*/
-    border-radius: 10px;
-}
-
-.just_row{
-    display: flex;
-    flex-direction: row;
-}
-
-.header_row{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    /*background-color: red !important;*/
-}
-
-.white_padding{
-    background-color: #d0eeff;
-    padding: 5px 10px;
-    border-radius: 100px ;
-}
-
-.icon{
-    width: 30px;
-    height: 30px;
+.logo_text{
+    margin-right: 10px;
     margin-left: 10px;
+    font-weight: bold;
 }
+
+.header_btn{
+    background-color: transparent;
+    padding: 10px 10px;
+    border-radius: 100px;
+    transition: background-color ease 200ms;
+    margin: 0 10px;
+}
+
+.header_btn:hover{
+    background-color: #a4cbec;
+
+}
+
+
+
